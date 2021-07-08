@@ -1,7 +1,9 @@
 import React, { useState } from 'react'
-import { Typography, Button, Form, Input } from 'antd';
+import { Typography, Form, Input } from 'antd';
 import FileUpload from '../../utils/FileUpload';
 import Axios from 'axios';
+import { Button } from "@material-ui/core"
+import { Col, Row } from 'antd';
 
 const { Title } = Typography;
 const { TextArea } = Input;
@@ -94,8 +96,8 @@ function UploadProductPage(props) {
 
 
     return (
-        <div style={{ maxWidth: '700px', margin: '2rem auto' }}>
-            <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
+        <div style={{ width: '100%', padding: '3rem 2rem' }}>
+            <div style={{ display: 'flex', justifyContent: 'center' }}>
                 <Title level={2}>상품 업로드</Title>
             </div>
 
@@ -124,8 +126,9 @@ function UploadProductPage(props) {
                 </select>
                 <br />
                 <br />
-                <button type="submit">확인</button>
-
+                <div style={{ display: 'flex', justifyContent: 'center' }}>
+                    <Button variant="contained" color="primary" type="submit">확인</Button>
+                </div>
             </Form>
         </div>
     )

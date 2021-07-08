@@ -66,7 +66,7 @@ function FileUpload(props) {
             <div style={{ display: 'flex', width: '350px', height: '240px', overflowX: 'scroll' }}>
                 {Images.map((image, index) => (
                     <div onClick={() => deleteHandler(image)} key={index}>
-                        <img style={{ minWidth: '300px', width: '300px', height: '240px' }} src={`https://safe-anchorage-40147.herokuapp.com/${image}`} />
+                        <img style={{ minWidth: '300px', width: '300px', height: '240px' }} src={`https://morning-beyond-54224.herokuapp.com/${image}`} />
                     </div>
                 ))}
             </div>

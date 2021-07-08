@@ -11,8 +11,8 @@ function ProductImage(props) {    //  props 에 들어올 데이터는 <ProductI
 
             props.detail.images.map(item => {               //map을 이용하여 역시 아이템들을 임시배열에 push해서 저장한다.
                 images.push({
-                    original: `https://safe-anchorage-40147.herokuapp.com/${item}`,
-                    thumbnail: `https://safe-anchorage-40147.herokuapp.com/${item}`
+                    original: `https://morning-beyond-54224.herokuapp.com/${item}`,
+                    thumbnail: `https://morning-beyond-54224.herokuapp.com/${item}`
                 })
             })
             setImages(images)                             //Images 전역 변수(useState)에 저장

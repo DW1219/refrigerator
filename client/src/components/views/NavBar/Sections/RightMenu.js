@@ -41,10 +41,10 @@ function RightMenu(props) {
           <a href="/product/upload">상품올리기</a>
         </Menu.Item>
 
-        <Menu.Item key="cart" style={{ paddingBottom: 3 }}>
-          <Badge count={user.userData && user.userData.cart.length}>
-            <a href="/user/cart" className="head-example" style={{ marginRight: -22, color: '#667777' }}>
-              <Icon type="shopping-cart" style={{ fontSize: 30, marginBottom: 3 }} />
+        <Menu.Item key="cart" style={{ paddingBottom: 1 }}>
+          <Badge count={user.userData && user.userData.cart.length} style={{ marginRight: 30, marginTop: 5 }}>
+            <a href="/user/cart" className="head-example" style={{ marginRight: -10, color: '#667777' }}>
+              <Icon type="shopping-cart" style={{ fontSize: 35, marginBottom: 1 }} />
             </a>
           </Badge>
         </Menu.Item>
