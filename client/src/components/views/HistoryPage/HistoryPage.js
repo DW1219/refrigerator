@@ -14,16 +14,16 @@ function HistoryPage(props) {
                     <table width="70%" align="center">
                         <thead>
                             <tr>
-                                <th>구매번호</th>
+                                <th>구매 상품</th>
                                 <th>가격</th>
                                 <th>수량</th>
-                                <th>구매날짜</th>
+                                <th>구매 날짜</th>
                             </tr>
                         </thead>
                         <tbody>
                             {props.user.userData && props.user.userData.history.map(item => (
                                 <tr key={item.id}>
-                                    <td>{item.id}</td>
+                                    <td>{item.name}</td>
                                     <td>{item.price}원</td>
                                     <td>{item.quantity}</td>
                                     <td>{item.dateOfPurchase}</td>
