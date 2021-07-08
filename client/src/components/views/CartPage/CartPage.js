@@ -75,9 +75,6 @@ function CartPage(props) {                         //여기 props는 현재 redu
                 <UserCardBlock products={props.user.cartDetail} removeItem={removeFromCart} />
             </div>
 
-
-
-
             {ShowTotal ?
                 <div style={{ marginTop: '3rem' }}>
                     <h2>Total Amount: {TotalPrice}원</h2>

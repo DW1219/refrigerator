@@ -8,6 +8,7 @@ import Checkbox from './Sections/CheckBox';
 import Radiobox from './Sections/RadioBox';
 import SearchFeatrue from './Sections/SearchFeature';
 import { regions, price } from './Sections/Datas';
+import { Button } from "@material-ui/core"
 
 
 function LandingPage() {
@@ -170,7 +171,7 @@ function LandingPage() {
 
             {PostSize >= Limit &&
                 <div style={{ display: 'flex', justifyContent: 'center' }}>
-                    <button onClick={loadMoreHandler}>더보기</button>
+                    <Button variant="contained" color="primary" onClick={loadMoreHandler}>더보기</Button>
                 </div>
             }
 

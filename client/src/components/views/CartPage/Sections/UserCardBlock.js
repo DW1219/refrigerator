@@ -1,5 +1,6 @@
 import React from 'react'
 import "./UserCardBlock.css"
+import { Button } from "@material-ui/core"
 
 function UserCardBlock(props) {
     //console.log(props)
@@ -27,9 +28,9 @@ function UserCardBlock(props) {
                     {product.price}원
                 </td>
                 <td>
-                    <button onClick={() => props.removeItem(product._id)}>
+                    <Button variant="contained" color="primary" onClick={() => props.removeItem(product._id)}>
                         Remove
-                    </button>
+                    </Button>
                 </td>
             </tr>
         ))
