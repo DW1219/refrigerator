@@ -37,6 +37,7 @@ router.post("/register", (req, res) => {
     });
 });
 
+//redux // const request = axios.post(`${USER_SERVER}/register`, dataToSubmit)   (RegisterPage.js -> user_actions.js)
 router.post("/login", (req, res) => {
     User.findOne({ email: req.body.email }, (err, user) => {
         if (!user)
