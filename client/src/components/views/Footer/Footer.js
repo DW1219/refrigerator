@@ -10,7 +10,13 @@ function Footer({ voiceStatus, setVoiceStatus }) {
   return (
     <div>
       <div className="gnb">
-        <button className="button button__back" />
+        <button
+          className="button button__back"
+          onClick={() => {
+            window.localStorage.setItem("searchTerm", JSON.stringify(""));
+            document.location.href = "/";
+          }}
+        />
         <a href="#a" className="button button__home" />
         <button
           className={

@@ -35,6 +35,7 @@ function VoiceStation({ setDisplayStatus }) {
         })
       );
       setIsListening(true);
+      window.localStorage.setItem("searchTerm", JSON.stringify(""));
     };
 
     ws.current.onclose = (error) => {
@@ -64,6 +65,16 @@ function VoiceStation({ setDisplayStatus }) {
           setResponseText(
             data.result.parameters.food + " 레시피를 알려드릴게요."
           );
+
+          window.localStorage.setItem(
+            "searchTerm",
+            JSON.stringify(data.result.parameters.food)
+          );
+          console.log(
+            "searchTerm2 = " +
+              JSON.parse(window.localStorage.getItem("searchTerm"))
+          );
+
           setDisplayStatus(false);
           // document.location.href =
           //   "http://127.0.0.1:9007/search/" + data.result.parameters.food;
