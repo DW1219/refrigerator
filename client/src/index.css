@@ -39,3 +39,74 @@ input.error {
   height: 5px;
   margin-top: -12px;
 }
+
+.dim {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 999;
+}
+
+.voice__box {
+  display: block;
+  margin-top: 407px;
+  text-align: center;
+  margin-bottom: 0px;
+}
+
+.voice__box .text__slarge {
+  font-size: 40px;
+  line-height: 56px;
+  color: #fff;
+}
+
+.icon__voice {
+  position: absolute;
+  top: 580px;
+  left: 0%;
+  width: 100%;
+  height: 20%;
+  background: no-repeat center/50% url(../src/images/mic.png);
+  z-index: 999;
+}
+
+.icon__voice:before {
+  content: '';
+  display: block;
+  width: 280px;
+  height: 280px;
+  border: 6px solid #fff;
+  opacity: 0.4;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.icon__voice__listening {
+  position: absolute;
+  top: 580px;
+  left: 0;
+  width: 100%;
+  height: 20%;
+  background: no-repeat center/45% url(../src/images/listening.gif);
+  z-index: 999;
+}
+
+.icon__voice__listening:before {
+  content: '';
+  display: block;
+  width: 280px;
+  height: 280px;
+  border: 6px solid #fff;
+  opacity: 0.4;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

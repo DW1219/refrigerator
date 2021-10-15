@@ -1,16 +1,26 @@
 import React from 'react'
-import {Icon} from 'antd';
+import "./Footer.css";
 
-function Footer() {
-    return (
-        <div style={{
-            height: '80px', display: 'flex',
-            flexDirection: 'column', alignItems: 'center',
-            justifyContent: 'center', fontSize:'1rem'
-        }}>
-           <p> Happy Coding  <Icon type="smile" /></p>
-        </div>
-    )
+function Footer({ voiceStatus, setVoiceStatus }) {
+  const clickVoiceBtn = () => {
+    setVoiceStatus(!voiceStatus);
+    console.log("navi - " + voiceStatus);
+  };
+
+  return (
+    <div>
+      <div className="gnb">
+        <button className="button button__back" />
+        <a href="#a" className="button button__home" />
+        <button
+          className={
+            voiceStatus ? "button button__voice__off" : "button button__voice"
+          }
+          onClick={clickVoiceBtn}
+        />
+      </div>
+    </div>
+  );
 }
 
 export default Footer

@@ -1,0 +1,45 @@
+.gnb {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  padding: 0px 65px;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.button {
+  display: inline-block;
+  border: 0px solid transparent;
+}
+
+.button__back {
+  width: 10%;
+  height: 75px;
+  background: url(../../../images/icon_back.png) 50% 50% / 27px
+    20px no-repeat;
+}
+
+.button__home {
+  width: 10%;
+  height: 75px;
+  background: url(../../../images/icon_home.png) 50% 50% / 28px
+    28px no-repeat;
+}
+
+.button__voice {
+  width: 10%;
+  height: 75px;
+  background: url(../../../images/icon-voice-on.png) 50% 50% / 18px
+    28px no-repeat;
+}
+
+.button__voice__off {
+  width: 10%;
+  height: 75px;
+  background: url(../../../images/icon-voice-off.png) 50% 50% / 18px
+    28px no-repeat;
+}
