@@ -1,29 +1,36 @@
 @import '~antd/dist/antd.css';
 
 .menu {
+  display: flex;
   padding: 4px 4px;
   border-bottom: solid 1px #ebc6e0;
-  overflow: auto;
-  box-shadow: 0 0 20px #e994cd;
-  background-color: rgb(255, 210, 238);  
+  box-shadow: 0 0 20px #f3b0dd;
+  background-color: rgb(255, 230, 245);
+  z-index: 5;
+  width: 100%;
+  position: fixed;
 }
 
 .menu__logo {
-  width: 550px;
-  float: left;
-  margin-left: 30px;
+  margin-top: 1em;
+  margin-left: 1em;
+  width: 200px;
 }
 
 .menu__logo a {
-  display: inline-block;
   font-size: 30px;
-  padding: 6px 20px;
+  padding-left: 0.2em;
   color: #db1b92;
+}
+
+.menu__container{
+  margin-left: auto;
+  right: 0;
 }
 
 .menu__container .ant-menu-item {
   padding: 1px 5px;
-  background-color: rgb(255, 210, 238);
+  background-color: rgb(255, 230, 245);
 }
 
 .menu__container .ant-menu-submenu-title {
@@ -33,60 +40,21 @@
 .menu__container .ant-menu-item a,
 .menu__container .ant-menu-submenu-title a {
   padding: 10px 20px;
+  color: #6e2050;
+  font-size: 15px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .menu__container .ant-menu-horizontal {
   border-bottom: none;
-    background-color: rgb(255, 210, 238);
+  background-color: rgb(255, 230, 245);
 }
 
-.menu__container .menu_left {
-  float: left;
+.cartImage{
+
 }
 
-.menu__container .menu_rigth {
-  float: right;
+.cartBadge{
+  
 }
 
-.menu__mobile-button {
-  float: right;
-  width: 15%;
-  height: 50px;
-  padding: 1px;
-  margin-top: -10%;
-  display: none !important; /* use of important to overwrite ant-btn */
-  background: #4035d3;
-}
-
-.menu_drawer .ant-drawer-body {
-  padding: 0 !important;
-}
-
-/* align header of Drawer with header of page */
-.menu_drawer .ant-drawer-header {
-  padding: 14px 24px !important;
-}
-
-@media (max-width: 767px) {
-  .menu__mobile-button {
-    display: inline-block !important;
-  }
-
-  .menu_left,
-  .menu_rigth {
-    display: none;
-  }
-
-  .menu__logo a {
-    margin-left: -30px;
-  }
-
-  .menu__container .ant-menu-item,
-  .menu__container .ant-menu-submenu-title {
-    padding: 1px 20px;
-  }
-
-  .menu__logo a {
-    padding: 5px 10px;
-  }
-}

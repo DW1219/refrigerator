@@ -5,6 +5,7 @@ import axios from 'axios';
 import { USER_SERVER } from '../../../Config';
 import { withRouter } from 'react-router-dom';
 import { useSelector } from "react-redux";
+import './Navbar.css'
 
 function RightMenu(props) {
   const user = useSelector(state => state.user)
@@ -21,12 +22,12 @@ function RightMenu(props) {
 
   if (user.userData && !user.userData.isAuth) { // login 하기전 유저들에게 보여지는 화면
     return (
-      <Menu mode={props.mode}>
+      <Menu className="menu__beforeLogin" mode={props.mode}>
         <Menu.Item key="mail">
-          <a href="/login">Signin</a>
+          <a href="/login">로그인</a>
         </Menu.Item>
         <Menu.Item key="app">
-          <a href="/register">Signup</a>
+          <a href="/register">회원가입</a>
         </Menu.Item>
       </Menu>
     )
@@ -38,11 +39,11 @@ function RightMenu(props) {
         </Menu.Item>
 
         <Menu.Item key="upload">
-          <a href="/product/upload">상품올리기</a>
+          <a href="/product/upload">음식올리기</a>
         </Menu.Item>
 
-        <Menu.Item key="cart" style={{ paddingBottom: 1 }}>
-          <Badge count={user.userData && user.userData.cart.length} style={{ marginRight: 30, marginTop: 5 }}>
+        <Menu.Item key="cart" className="cartImage">
+          <Badge className="cartBadge" count={user.userData && user.userData.cart.length} style={{ marginRight: 30, marginTop: 5 }}>
             <a href="/user/cart" className="head-example" style={{ marginRight: -10, color: '#667777' }}>
               <Icon type="shopping-cart" style={{ fontSize: 35, marginBottom: 1 }} />
             </a>

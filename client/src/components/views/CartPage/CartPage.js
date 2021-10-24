@@ -77,7 +77,7 @@ function CartPage(props) {                         //여기 props는 현재 redu
 
             {ShowTotal ?
                 <div style={{ marginTop: '3rem' }}>
-                    <h2>Total Amount: {TotalPrice}원</h2>
+                    <h1>Total Amount: {TotalPrice}원</h1>
                 </div>
                 : ShowSuccess ?
                     <Result

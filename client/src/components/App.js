@@ -12,6 +12,8 @@ import DetailProductPage from "./views/DetailProductPage/DetailProductPage";
 import CartPage from "./views/CartPage/CartPage";
 import HistoryPage from "./views/HistoryPage/HistoryPage";
 import VoiceStation from "./views/SearchPage/VoiceStation";
+import './App.css'
+
 
 //null   Anyone Can go inside
 //true   only logged in user can go inside
@@ -25,7 +27,7 @@ function App() {
   return (
     <Suspense fallback={<div>Loading...</div>}>
       <NavBar />
-      <div style={{ paddingTop: "69px", minHeight: "calc(100vh - 80px)" }}>
+      <div className="app_pages">
         <Switch>
           <Route exact path="/" component={Auth(LandingPage, null)} />
           <Route exact path="/login" component={Auth(LoginPage, false)} />

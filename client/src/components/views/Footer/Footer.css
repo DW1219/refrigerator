@@ -9,6 +9,7 @@
   align-items: center;
   justify-content: space-between;
   box-sizing: border-box;
+  background: linear-gradient(rgb(252, 245, 255), rgb(255, 248, 247));
 }
 
 .button {

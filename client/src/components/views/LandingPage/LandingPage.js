@@ -9,6 +9,7 @@ import Radiobox from './Sections/RadioBox';
 import SearchFeatrue from './Sections/SearchFeature';
 import { regions, price } from './Sections/Datas';
 import { Button } from "@material-ui/core"
+import './LandingPage.css'
 
 
 function LandingPage(/* { voiceSearchTerm } */) {
@@ -157,23 +158,16 @@ function LandingPage(/* { voiceSearchTerm } */) {
   };
 
   return (
-    <div style={{ width: "75%", margin: "3rem auto" }}>
-      <div style={{ textAlign: "center" }}>
-        <h2>
-          상품 List <Icon type="rocket" />
-        </h2>
+    <div className="wrap__total_format">
+      <div className="wrap__header_LandingPage">
+        <h1>
+          식품 List <Icon type="smile" />
+        </h1>
       </div>
       {/* Filter */}
-      <Row gutter={[16, 16]}>
+      <Row gutter={[16, 24]}>
         <Col lg={12} xs={24}>
-          {/* CheckBox */}
-          <Checkbox
-            list={regions}
-            handleCommunication={(filters) => handleFilters(filters, "regions")}
-          />
-        </Col>
-        <Col lg={12} xs={24}>
-          {/* RadioBox */}
+          {/* 가격필터 */}
           <Radiobox
             list={price}
             handleCommunication={(filters) => handleFilters(filters, "price")}
@@ -182,7 +176,7 @@ function LandingPage(/* { voiceSearchTerm } */) {
       </Row>
 
       {/* Search */}
-      <div
+      <div 
         style={{
           display: "flex",
           justifyContent: "flex-end",

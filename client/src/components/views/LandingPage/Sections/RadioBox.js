@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import { Collapse, Radio } from 'antd';
+import './RadioBox.css'
+
 const { Panel } = Collapse;
 
 function RadioBox(props) {
@@ -22,9 +24,8 @@ function RadioBox(props) {
     return (
         <div>
             <Collapse defaultActiveKey={['0']} >
-                <Panel header="가격 필터" key="1">
-
-                    <Radio.Group onChange={handleChange} value={Value}>
+                <Panel className="panel_filter" header="가격 필터" key="1">
+                    <Radio.Group onChange={handleChange} value={Value} className="radioGroup_control">
                         {renderRadioboxLists()}
                     </Radio.Group>
 
