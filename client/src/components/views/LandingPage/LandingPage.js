@@ -165,9 +165,14 @@ function LandingPage(/* { voiceSearchTerm } */) {
         </h1>
       </div>
       {/* Filter */}
-      <Row gutter={[16, 24]}>
+      <Row gutter={[16, 8]}>
         <Col lg={12} xs={24}>
           {/* 가격필터 */}
+          <Checkbox
+            list={regions}
+            handleCommunication={filters => handleFilters(filters, "regions")} />
+        </Col>
+        <Col lg={12} xs={24}>
           <Radiobox
             list={price}
             handleCommunication={(filters) => handleFilters(filters, "price")}

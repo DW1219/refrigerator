@@ -1,6 +1,9 @@
 import React, { useState } from 'react'
 import { Collapse, Checkbox } from 'antd';
+import './CheckBox.css'
+
 const { Panel } = Collapse;
+
 
 function CheckBox(props) {
 
@@ -38,7 +41,7 @@ function CheckBox(props) {
     return (
         <div>
             <Collapse defaultActiveKey={['0']} >
-                <Panel header="지역 필터" key="1">
+                <Panel className="panel_filter_checkbox" header="지역 필터" key="1">
 
                     {renderCheckboxLists()}
                 </Panel>
