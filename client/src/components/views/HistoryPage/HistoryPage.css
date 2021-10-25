@@ -1,0 +1,10 @@
+.history-page-container {
+  margin: 3rem auto;
+  width: 95%;
+  padding-bottom: 6rem;
+}
+
+.history-page-main {
+    display: flex;
+    justify-content: center;
+}
