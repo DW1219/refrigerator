@@ -1,0 +1,42 @@
+.product-info-container {
+  margin: 3rem auto;
+  width: 95%;
+  padding-bottom: 5rem;
+}
+
+.add-cart-btn {
+    display: flex;
+    justify-content: center;
+}
+
+
+.product-info-title {
+  font-size: 22px;
+  font-weight: bold;
+  color: black;
+  border-top: 1px solid #dddddd;
+  padding-top: 1rem;
+  padding-bottom: 0.5rem;
+}
+
+.product-info-price {
+  font-size: 18px;
+  color: rgb(194, 0, 0);
+  padding-bottom: 0.5rem;
+}
+
+.product-info-sold {
+  font-size: 18px;
+  padding-bottom: 0.5rem;
+}
+
+.product-info-views {
+  font-size: 18px;
+  padding-bottom: 0.5rem;
+}
+
+.product-info-description {
+  font-size: 18px;
+  border-bottom: 1px solid #dddddd;
+  padding-bottom: 1rem;
+}

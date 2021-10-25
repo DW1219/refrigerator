@@ -1,6 +1,7 @@
 .wrap__total_format{
   margin: 3rem auto;
-  width: 75%;
+  width: 95%;
+  padding-bottom: 6rem;
 }
 
 .wrap__header_LandingPage {
@@ -9,10 +10,27 @@
 
 .ant-card-body{
   text-align: center;
+  font-weight: bold;
 }
 
 .ant-card-meta-description{
   font-size: 16px;
   font-weight: 600;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.search-area {
+  display: flex;
+  justify-content: flex-end;
+  margin: 1rem auto;
+}
+
+.more-area {
+  display: flex;
+  justify-content: center
+}
+
+.card-main-container {
+  border: none !important;
+  margin-bottom: 1.6rem !important;
 }

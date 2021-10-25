@@ -1,5 +1,5 @@
 .panel_filter_checkbox{
-  background-color: #eafcffce;
+  background-color: rgb(253, 241, 249);
   font-size: 15px;
 }
 
@@ -8,5 +8,6 @@
   font-family: 'Courier New', Courier, monospace;
 }
 
-.ant-collapse-content-box span{
+.checkbox-background {
+  background-color: white;
 }
