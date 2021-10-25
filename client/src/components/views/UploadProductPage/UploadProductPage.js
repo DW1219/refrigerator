@@ -108,12 +108,12 @@ function UploadProductPage(props) {
         <FileUpload refreshFunction={updateImages} />
         <br />
         <br />
-        {/* <label className="label_format">식품명</label> */}
+        {/* <label className="label_format">음식명</label> */}
         <Input
           className="input-data input-data-input"
           onChange={titleNameChangeHandler}
           value={TitleName}
-          placeholder="식품명"
+          placeholder="음식명"
         />
         <br />
         <br />

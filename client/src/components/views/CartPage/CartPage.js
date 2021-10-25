@@ -87,7 +87,7 @@ function CartPage(props) {
       </div>
 
       {ShowTotal ? (
-        <div style={{ marginTop: '3rem' }}>
+        <div className="total-price-layout">
           <h2>총 금액: {TotalPrice}원</h2>
           <br />
         </div>

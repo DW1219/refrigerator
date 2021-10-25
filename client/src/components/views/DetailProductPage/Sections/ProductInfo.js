@@ -1,4 +1,4 @@
-import { Button, Descriptions } from 'antd';
+import { Button } from 'antd';
 import React from 'react';
 import { useDispatch } from 'react-redux'; //redux import 하는 방법
 import { addToCart } from '../../../../_actions/user_actions';
@@ -13,8 +13,17 @@ function ProductInfo(props) {
 
   return (
     <div className="product-info-container">
-      <Descriptions bordered className="product-info-main-layout">
-        <Descriptions.Item label="Price">
+      <div className="product-info-title">{props.detail.title}</div>
+      <div className="product-info-price">{props.detail.price}원</div>
+      <div className="product-info-sold">Sold : {props.detail.sold}</div>
+      <div className="product-info-views">Views : {props.detail.views}</div>
+      <div className="product-info-description">{props.detail.description}</div>
+      {/* <Descriptions bordered className="product-info-main-layout">
+        <Descriptions.Item label="Title">
+          {props.detail.title}
+        </Descriptions.Item>
+
+        <Descriptions.Item label="Price" className="product-info-price">
           {props.detail.price}원
         </Descriptions.Item>
         <Descriptions.Item label="Sold">{props.detail.sold}</Descriptions.Item>
@@ -24,7 +33,7 @@ function ProductInfo(props) {
         <Descriptions.Item label="Description">
           {props.detail.description}
         </Descriptions.Item>
-      </Descriptions>
+      </Descriptions> */}
 
       <br />
       <br />
