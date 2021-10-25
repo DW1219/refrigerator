@@ -1,16 +1,13 @@
-import React, { useEffect, useState } from 'react'
-import { FaCode } from "react-icons/fa";
-import axios from "axios"
-import { Icon, Col, Card, Row, Carousel } from 'antd';
+import { Button } from '@material-ui/core';
+import { Card, Col, Row } from 'antd';
 import Meta from 'antd/lib/card/Meta';
+import axios from 'axios';
+import React, { useEffect, useState } from 'react';
 import ImageSlider from '../../utils/ImageSlider';
+import './LandingPage.css';
 import Checkbox from './Sections/CheckBox';
+import { price, regions } from './Sections/Datas';
 import Radiobox from './Sections/RadioBox';
-import SearchFeatrue from './Sections/SearchFeature';
-import { regions, price } from './Sections/Datas';
-import { Button } from "@material-ui/core"
-import './LandingPage.css'
-
 
 function LandingPage(/* { voiceSearchTerm } */) {
   const [Products, setProducts] = useState([]);
@@ -22,18 +19,18 @@ function LandingPage(/* { voiceSearchTerm } */) {
     regions: [],
     price: [],
   });
-  const [SearchTerm, setSearchTerm] = useState("");
+  const [SearchTerm, setSearchTerm] = useState('');
 
-  var searchTerm = "";
+  var searchTerm = '';
   const getSearchTerm = () => {
-    console.log("getSearchTerm()");
-    searchTerm = JSON.parse(window.localStorage.getItem("searchTerm"));
-    console.log("searchTerm = " + searchTerm);
+    console.log('getSearchTerm()');
+    searchTerm = JSON.parse(window.localStorage.getItem('searchTerm'));
+    console.log('searchTerm = ' + searchTerm);
   };
 
   useEffect(() => {
     //useEffect 함수는 리액트 컴포넌트가 렌더링 될때마다 특정작업을 실행할 수 있도록 하는 Hook
-    console.log("useEffect");
+    console.log('useEffect');
     getSearchTerm();
     let body = {
       skip: Skip, //현재 0개로 초기화되있음
@@ -42,16 +39,16 @@ function LandingPage(/* { voiceSearchTerm } */) {
 
     getProducts(body); // axios 통신함수
 
-    if (searchTerm !== "") {
+    if (searchTerm !== '') {
       updateSearchTerm(searchTerm);
     }
 
-    console.log("useEffect = " + searchTerm);
+    console.log('useEffect = ' + searchTerm);
   }, []); // Component가 화면에 처음 나타났을때(mount됬을때) 만 동작시키고 싶으면 이렇게 빈배열
 
   const getProducts = (body) => {
     axios
-      .post("/api/product/products", body) //여긴 보내는쪽Client. 서버쪽 routes 밑에 product 쪽에 받는부분 구현해야함 (body 같이 보내줌)
+      .post('/api/product/products', body) //여긴 보내는쪽Client. 서버쪽 routes 밑에 product 쪽에 받는부분 구현해야함 (body 같이 보내줌)
       .then((response) => {
         if (response.data.success) {
           //console.log(response.data);
@@ -63,7 +60,7 @@ function LandingPage(/* { voiceSearchTerm } */) {
           setPostSize(response.data.postSize);
           console.log(Products);
         } else {
-          alert("상품 데이터 로딩 실패");
+          alert('상품 데이터 로딩 실패');
         }
       });
   };
@@ -84,8 +81,9 @@ function LandingPage(/* { voiceSearchTerm } */) {
     //console.log(product)
 
     return (
-      <Col lg={6} mg={8} xs={24} key={index}>
+      <Col lg={6} mg={8} xs={12} key={index}>
         <Card
+          className="card-main-container"
           cover={
             <a href={`/product/${product._id}`}>
               <ImageSlider images={product.images} />
@@ -130,7 +128,7 @@ function LandingPage(/* { voiceSearchTerm } */) {
     newFilters[category] = filters; // check박스를 선택할때마다 추가되는 개념이 아니고 이미 추가되어온 데이터(filters)를 그대로 복붙해서 가지고 있는것
     //console.log("handleFilters 안에서 동작중.... filters : " + filters + " category : " + category + " newFilters[category] : " + newFilters[category])
 
-    if (category === "price") {
+    if (category === 'price') {
       // Price일 경우에는 index가 아닌 가격조건(0,9999 등)으로 구분해서 이미지를 뿌려줘야하므로,
       let priceValues = handlePrice(filters); // 가격조건을 담을 작업이 필요함. handlePrice라는 함수를 따로만들어 가격조건을 추출하도록하자.
       newFilters[category] = priceValues;
@@ -143,7 +141,7 @@ function LandingPage(/* { voiceSearchTerm } */) {
 
   const updateSearchTerm = (newSearchTerm) => {
     // props.refreshFunction(event.currentTarget.value) 를 받은 데이터
-    console.log("updateSearchTerm() term = " + newSearchTerm);
+    console.log('updateSearchTerm() term = ' + newSearchTerm);
 
     let body = {
       skip: 0,
@@ -159,35 +157,31 @@ function LandingPage(/* { voiceSearchTerm } */) {
 
   return (
     <div className="wrap__total_format">
-      <div className="wrap__header_LandingPage">
+      {/* <div className="wrap__header_LandingPage">
         <h1>
           식품 List <Icon type="smile" />
         </h1>
-      </div>
+      </div> */}
       {/* Filter */}
       <Row gutter={[16, 8]}>
         <Col lg={12} xs={24}>
-          {/* 가격필터 */}
+          {/* 지역필터 */}
           <Checkbox
             list={regions}
-            handleCommunication={filters => handleFilters(filters, "regions")} />
+            handleCommunication={(filters) => handleFilters(filters, 'regions')}
+          />
         </Col>
         <Col lg={12} xs={24}>
+          {/* 가격필터 */}
           <Radiobox
             list={price}
-            handleCommunication={(filters) => handleFilters(filters, "price")}
+            handleCommunication={(filters) => handleFilters(filters, 'price')}
           />
         </Col>
       </Row>
 
       {/* Search */}
-      <div 
-        style={{
-          display: "flex",
-          justifyContent: "flex-end",
-          margin: "1rem auto",
-        }}
-      >
+      <div className="search-area">
         {/* <SearchFeatrue refreshFunction={updateSearchTerm} /> */}
       </div>
 
@@ -197,7 +191,7 @@ function LandingPage(/* { voiceSearchTerm } */) {
       <br />
 
       {PostSize >= Limit && (
-        <div style={{ display: "flex", justifyContent: "center" }}>
+        <div className="more-area">
           <Button variant="contained" color="primary" onClick={loadMoreHandler}>
             더보기
           </Button>
@@ -207,4 +201,4 @@ function LandingPage(/* { voiceSearchTerm } */) {
   );
 }
 
-export default LandingPage
+export default LandingPage;
