@@ -6,18 +6,11 @@ function UserCardBlock(props) {
   //console.log(props)
   //console.log(props.products)
 
-<<<<<<< HEAD
-    const renderCartImage = (images) => {
-        if (images.length > 0) {
-            let image = images[0]
-            return `http://localhost:9020/${image}`
-        }
-=======
+
   const renderCartImage = (images) => {
     if (images.length > 0) {
       let image = images[0];
-      return `http://localhost:5000/${image}`;
->>>>>>> 6dc85ce1763761a256216d004c6cd72e70a9c0bb
+      return `http://localhost:9020/${image}`;
     }
   };
 

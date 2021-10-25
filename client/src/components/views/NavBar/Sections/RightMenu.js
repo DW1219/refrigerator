@@ -20,14 +20,10 @@ function RightMenu(props) {
     });
   };
 
-<<<<<<< HEAD
   if (user.userData && !user.userData.isAuth) { // login 하기전 유저들에게 보여지는 화면
     console.log("user.userData : ",user.userData)
     console.log("user.userData.isAuth : ",user.userData.isAuth)
-=======
-  if (user.userData && !user.userData.isAuth) {
-    // login 하기전 유저들에게 보여지는 화면
->>>>>>> 6dc85ce1763761a256216d004c6cd72e70a9c0bb
+
     return (
       <Menu className="menu__beforeLogin" mode={props.mode}>
         <Menu.Item key="mail">
@@ -37,15 +33,9 @@ function RightMenu(props) {
           <a href="/register">회원가입</a>
         </Menu.Item>
       </Menu>
-<<<<<<< HEAD
-    )
+    );
   } else {   // login 이후에 유저들에게 보여지는 화면
     console.log("user.userData : ",user.userData)
-=======
-    );
-  } else {
-    // login 이후에 유저들에게 보여지는 화면
->>>>>>> 6dc85ce1763761a256216d004c6cd72e70a9c0bb
     return (
       <Menu mode={props.mode}>
         <Menu.Item key="history">
