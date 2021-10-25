@@ -1,0 +1,14 @@
+.product-info-container {
+  margin: 3rem auto;
+  width: 95%;
+  padding-bottom: 5rem;
+}
+
+.add-cart-btn {
+    display: flex;
+    justify-content: center;
+}
+
+.product-info-main-layout {
+    
+}

@@ -6,11 +6,29 @@ table {
   }
   
   td,th {
-    border: 1px solid #dddddd;
-    text-align: left;
-    padding: 8px;
+    border-bottom: 1px solid #dddddd;
+  }
+
+  tr {
+    padding: 100px;
   }
   
+  .title-layout {
+    font-weight: bold;
+  }
+
+  .count-layout {
+    text-align: right;
+  }
+
+  .price-layout {
+    text-align: right;
+  }
+
+  .remove-btn-layout {
+    text-align: right;
+  }
+
   tr:nth-child(even) {
-    background-color: #dddddd;
+    /* background-color: #dddddd; */
   }

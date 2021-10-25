@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import { Menu } from 'antd';
+import { Badge, Icon, Menu } from 'antd';
 import axios from 'axios';
 import React from 'react';
 import { useSelector } from 'react-redux';
@@ -44,16 +44,23 @@ function RightMenu(props) {
           <a href="/product/upload">음식올리기</a>
         </Menu.Item>
 
-        {/* <Menu.Item key="cart" className="cartImage">
-          <Badge className="cartBadge" count={user.userData && user.userData.cart.length} style={{ marginRight: 30, marginTop: 5 }}>
-            <a href="/user/cart" className="head-example" style={{ marginRight: -10, color: '#667777' }}>
-              <Icon type="shopping-cart" style={{ fontSize: 35, marginBottom: 1 }} />
+        <Menu.Item key="cart">
+          <Badge
+            className="cartBadge"
+            count={user.userData && user.userData.cart.length}
+            style={{ marginRight: 30, marginTop: 5 }}
+          >
+            <a
+              href="/user/cart"
+              className="head-example"
+              style={{ marginRight: -10, color: '#667777' }}
+            >
+              <Icon
+                type="shopping-cart"
+                style={{ fontSize: 35, marginBottom: 1, color: '#6e2050' }}
+              />
             </a>
           </Badge>
-        </Menu.Item> */}
-
-        <Menu.Item key="cart" className="cartImage">
-          <a href="/user/cart">장바구니</a>
         </Menu.Item>
 
         <Menu.Item key="logout">
