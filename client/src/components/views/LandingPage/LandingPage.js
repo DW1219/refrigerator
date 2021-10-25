@@ -50,9 +50,11 @@ function LandingPage(/* { voiceSearchTerm } */) {
   }, []); // Component가 화면에 처음 나타났을때(mount됬을때) 만 동작시키고 싶으면 이렇게 빈배열
 
   const getProducts = (body) => {
+    console.log("처음 시작하자마자 타는 곳. 서버로 요청전")
     axios
       .post("/api/product/products", body) //여긴 보내는쪽Client. 서버쪽 routes 밑에 product 쪽에 받는부분 구현해야함 (body 같이 보내줌)
       .then((response) => {
+        console.log("요청 받은 데이터:",response)
         if (response.data.success) {
           //console.log(response.data);
           if (body.loadMore) {

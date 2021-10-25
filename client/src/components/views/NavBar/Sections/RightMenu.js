@@ -21,6 +21,8 @@ function RightMenu(props) {
   };
 
   if (user.userData && !user.userData.isAuth) { // login 하기전 유저들에게 보여지는 화면
+    console.log("user.userData : ",user.userData)
+    console.log("user.userData.isAuth : ",user.userData.isAuth)
     return (
       <Menu className="menu__beforeLogin" mode={props.mode}>
         <Menu.Item key="mail">
@@ -32,6 +34,7 @@ function RightMenu(props) {
       </Menu>
     )
   } else {   // login 이후에 유저들에게 보여지는 화면
+    console.log("user.userData : ",user.userData)
     return (
       <Menu mode={props.mode}>
         <Menu.Item key="history">

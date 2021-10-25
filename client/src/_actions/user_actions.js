@@ -22,9 +22,10 @@ export function registerUser(dataToSubmit) {
 }
 
 export function loginUser(dataToSubmit) {
+    console.log("요청보냄")
     const request = axios.post(`${USER_SERVER}/login`, dataToSubmit)
         .then(response => response.data);
-
+    console.log("요청받음")
     return {
         type: LOGIN_USER,
         payload: request

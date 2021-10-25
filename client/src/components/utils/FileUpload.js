@@ -63,7 +63,7 @@ function FileUpload(props) {
             <div className="dropzone-img-section">
                 {Images.map((image, index) => (
                     <div onClick={() => deleteHandler(image)} key={index}>
-                        <img className="dropzone-img-control" src={`http://localhost:5000/${image}`} />
+                        <img className="dropzone-img-control" src={`http://localhost:9020/${image}`} />
                     </div>
                 ))}
             </div>
