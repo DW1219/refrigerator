@@ -12,11 +12,11 @@
 
 .history-page-main-head {
   text-align: center;
-  background-color: rgb(245, 245, 245);
+  background-color: rgba(253, 250, 243, 0.959);
 }
 
 .history-page-main-head-title {
-  border-bottom: none;
+  border-bottom: 1px solid transparent;
 }
 
 td,
