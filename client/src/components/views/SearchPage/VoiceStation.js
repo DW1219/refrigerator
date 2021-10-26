@@ -10,7 +10,7 @@ function VoiceStation({ setDisplayStatus }) {
   const [responseText, setResponseText] = useState(initialText);
   const [isListening, setIsListening] = useState(false);
 
-  const webSocketUrl = "ws://localhost:8008/nlu/dialogflow/stream/text";
+  const webSocketUrl = "ws://localhost:8009/nlu/dialogflow/stream/text";
   let ws = useRef(null);
 
   useEffect(() => {
