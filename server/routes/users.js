@@ -115,7 +115,7 @@ router.post('/addToCart', auth, (req, res) => {
                 //cart 안에 정보들을 넣을때 이런식으로 넣는다.
                 id: req.body.productId,
                 quantity: 1,
-                date: new Date(Date.now()).toLocaleString(),
+                date: new Date(Date.now()).toString(),
               },
             },
           },
@@ -175,7 +175,7 @@ router.post('/successBuy', auth, (req, res) => {
     //이미 action 넘길때 인자로 cartDetail: props.user.cartDetail 라고 redux의 구조를 받았음.
     tempHistory.push({
       //redux cartDetail 구조를 그대로 넣는거라고 보면됨.
-      dateOfPurchase: new Date(Date.now()).toString(),
+      dateOfPurchase: new Date(Date.now()).toLocaleString(),
       name: item.title,
       id: item._id,
       price: item.price,
