@@ -5,20 +5,21 @@ import { Drawer, Button, Icon } from 'antd';
 import './Sections/Navbar.css';
 
 function NavBar() {
-  const [visible, setVisible] = useState(false)
+  const [visible, setVisible] = useState(false);
 
   const showDrawer = () => {
-    setVisible(true)
+    setVisible(true);
   };
 
   const onClose = () => {
-    setVisible(false)
+    setVisible(false);
   };
 
   return (
     <nav className="menu">
       <div className="menu__logo">
-        <a href="/">Food Market</a>
+        <a href="/">Yammm </a>
+        <i class="fas fa-utensils fa-2x"></i>
       </div>
       <div className="menu__container">
         <div className="menu_rigth">
@@ -26,7 +27,7 @@ function NavBar() {
         </div>
       </div>
     </nav>
-  )
+  );
 }
 
-export default NavBar
+export default NavBar;

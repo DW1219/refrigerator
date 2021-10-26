@@ -3,12 +3,16 @@
 .menu {
   display: flex;
   padding: 4px 4px;
-  border-bottom: solid 1px #ebc6e0;
-  box-shadow: 0 0 20px #f3b0dd;
-  background-color: rgb(255, 230, 245);
+  box-shadow: 0 0 10px #f3ecb0;
+  background-color: #eead2b;
   z-index: 5;
   width: 100%;
   position: fixed;
+  font-family: "poppins-bold";
+}
+
+.fas {
+  color:#fff;
 }
 
 .menu__logo {
@@ -20,7 +24,7 @@
 .menu__logo a {
   font-size: 30px;
   padding-left: 0.2em;
-  color: #db1b92;
+  color: #fff;
 }
 
 .menu__container{
@@ -30,7 +34,7 @@
 
 .menu__container .ant-menu-item {
   padding: 1px 5px;
-  background-color: rgb(255, 230, 245);
+  background-color: #eead2b;
 }
 
 .menu__container .ant-menu-submenu-title {
@@ -42,10 +46,9 @@
   padding: 10px 20px;
   color: #6e2050;
   font-size: 15px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .menu__container .ant-menu-horizontal {
   border-bottom: none;
-  background-color: rgb(255, 230, 245);
+  background-color: #eead2b;
 }
