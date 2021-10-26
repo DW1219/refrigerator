@@ -92,7 +92,7 @@ function CartPage(props) {
           <br />
         </div>
       ) : ShowSuccess ? (
-        <Result status="success" title="구매 완료" />
+        <Result status="success" title="주문 완료" />
       ) : (
         <>
           <br />
