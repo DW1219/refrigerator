@@ -2,9 +2,39 @@
   margin: 3rem auto;
   width: 95%;
   padding-bottom: 6rem;
+  font-size: 16px;
 }
 
 .history-page-main {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
+}
+
+.history-page-main-head {
+  text-align: center;
+  background-color: rgb(245, 245, 245);
+}
+
+.history-page-main-head-title {
+  border-bottom: none;
+}
+
+td,
+th {
+  padding: 7px 3px;
+}
+
+.history-page-main-body-name {
+}
+
+.history-page-main-body-price {
+  text-align: center;
+}
+
+.history-page-main-body-quantity {
+  text-align: center;
+}
+
+.history-page-main-body-dateOfPurchase {
+  text-align: center;
 }

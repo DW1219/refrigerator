@@ -10,23 +10,29 @@ function HistoryPage(props) {
             <br /> */}
       <div className="history-page-main">
         <div>
-          <table width="70%" align="center">
+          <table>
             <thead className="history-page-main-head">
               <tr>
-                <th>구매 상품</th>
-                <th>가격</th>
-                <th>수량</th>
-                <th>구매 날짜</th>
+                <th className="history-page-main-head-title">주문 음식</th>
+                <th className="history-page-main-head-title">가격</th>
+                <th className="history-page-main-head-title">수량</th>
+                <th className="history-page-main-head-title">주문 날짜</th>
               </tr>
             </thead>
             <tbody className="history-page-main-body">
               {props.user.userData &&
                 props.user.userData.history.map((item) => (
                   <tr key={item.id}>
-                    <td>{item.name}</td>
-                    <td>{item.price}원</td>
-                    <td>{item.quantity}</td>
-                    <td>{item.dateOfPurchase}</td>
+                    <td className="history-page-main-body-name">{item.name}</td>
+                    <td className="history-page-main-body-price">
+                      {item.price}원
+                    </td>
+                    <td className="history-page-main-body-quantity">
+                      {item.quantity}
+                    </td>
+                    <td className="history-page-main-body-dateOfPurchase">
+                      {item.dateOfPurchase}
+                    </td>
                   </tr>
                 ))}
             </tbody>
